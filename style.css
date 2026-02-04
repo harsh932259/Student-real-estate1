@@ -1,3 +1,5 @@
+/* ---------------- BASIC RESET ---------------- */
+
 *{
     margin:0;
     padding:0;
@@ -8,20 +10,23 @@
 body{
     background:#ffffff;
     color:#222;
+    line-height:1.6;
 }
 
+/* ---------------- HEADER / NAVBAR ---------------- */
+
 header{
+    border-bottom:1px solid #e6e6e6;
     background:#ffffff;
-    border-bottom:1px solid #e5e5e5;
 }
 
 .navbar{
     max-width:1100px;
     margin:auto;
+    padding:14px 16px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px;
 }
 
 .logo{
@@ -30,10 +35,14 @@ header{
     color:#0d6efd;
 }
 
+nav{
+    display:flex;
+    gap:18px;
+}
+
 nav a{
     text-decoration:none;
     color:#222;
-    margin-left:15px;
     font-weight:500;
 }
 
@@ -41,9 +50,11 @@ nav a:hover{
     color:#0d6efd;
 }
 
+/* ---------------- HERO ---------------- */
+
 .hero{
-    background:#f5f9ff;
-    padding:70px 15px;
+    background:#f4f8ff;
+    padding:80px 16px;
     text-align:center;
 }
 
@@ -55,40 +66,54 @@ nav a:hover{
 .hero p{
     margin-top:10px;
     color:#555;
+    max-width:650px;
+    margin-left:auto;
+    margin-right:auto;
 }
+
+/* ---------------- BUTTON ---------------- */
 
 .btn{
     display:inline-block;
-    margin-top:20px;
-    padding:12px 22px;
+    margin-top:22px;
+    padding:12px 24px;
     background:#0d6efd;
-    color:white;
+    color:#ffffff;
     text-decoration:none;
     border-radius:4px;
+    border:none;
+    cursor:pointer;
 }
+
+/* ---------------- CONTAINER ---------------- */
 
 .container{
     max-width:1100px;
     margin:auto;
-    padding:40px 15px;
+    padding:50px 16px;
 }
+
+/* ---------------- SECTION TITLE ---------------- */
 
 .section-title{
     font-size:26px;
     color:#0d6efd;
-    margin-bottom:20px;
+    margin-bottom:24px;
 }
+
+/* ---------------- CARDS ---------------- */
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+    gap:22px;
 }
 
 .card{
-    border:1px solid #e5e5e5;
+    border:1px solid #e6e6e6;
     border-radius:6px;
     overflow:hidden;
+    background:#fff;
 }
 
 .card img{
@@ -98,26 +123,30 @@ nav a:hover{
 }
 
 .card-body{
-    padding:15px;
+    padding:14px;
 }
 
 .card-body h4{
-    margin-bottom:5px;
+    margin-bottom:6px;
 }
+
+/* ---------------- FILTER BAR ---------------- */
 
 .filters{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-    gap:10px;
-    margin-bottom:25px;
+    grid-template-columns:repeat(auto-fill, minmax(180px,1fr));
+    gap:12px;
+    margin-bottom:26px;
 }
 
 .filters input,
 .filters select{
     padding:10px;
-    border:1px solid #ccc;
     border-radius:4px;
+    border:1px solid #ccc;
 }
+
+/* ---------------- FORM ---------------- */
 
 form{
     max-width:600px;
@@ -129,14 +158,85 @@ form textarea{
     width:100%;
     padding:10px;
     margin-bottom:12px;
-    border:1px solid #ccc;
     border-radius:4px;
+    border:1px solid #ccc;
 }
 
+/* ---------------- FOOTER ---------------- */
+
 footer{
-    background:#f5f9ff;
-    padding:20px;
+    background:#f4f8ff;
     text-align:center;
+    padding:18px 12px;
     color:#555;
-    margin-top:50px;
+    font-size:14px;
+}
+
+/* ===================================================== */
+/* ================== MOBILE VIEW ====================== */
+/* ===================================================== */
+
+@media (max-width: 768px){
+
+    .navbar{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    nav{
+        width:100%;
+        flex-wrap:wrap;
+        gap:12px;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    .hero{
+        padding:50px 14px;
+    }
+
+    .hero h1{
+        font-size:26px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .container{
+        padding:32px 14px;
+    }
+
+    .section-title{
+        font-size:22px;
+    }
+
+    .card img{
+        height:160px;
+    }
+
+    form{
+        width:100%;
+    }
+
+}
+
+/* ===================================================== */
+/* ================= SMALL MOBILE ====================== */
+/* ===================================================== */
+
+@media (max-width: 420px){
+
+    .hero h1{
+        font-size:23px;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:6px;
+    }
+
 }
