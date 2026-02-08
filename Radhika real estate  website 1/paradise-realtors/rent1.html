@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Luxury Apartment – Baner | Paradise Realtors</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav>
+<div class="nav-wrap">
+<img src="/images/logo.png" alt="Paradise Realtors">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="rent.html">Home for Rent</a></li>
+<li><a href="sale.html">Home for Sale</a></li>
+<li><a href="plot.html">Plot for Sale</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+</nav>
+
+<div class="hero" style="
+background:
+linear-gradient(rgba(10,27,46,.55),rgba(10,27,46,.55)),
+url('/images/rent1-1.jpeg');
+background-size:cover;
+background-position:center;
+">
+<h1>Luxury Apartment – Sahakarnagar</h1>
+</div>
+
+<section>
+<div class="container split">
+
+<div>
+
+<h2>Property Details</h2>
+
+<p><strong>Location:</strong> Sahakarnagar, Pune</p>
+<p><strong>Price:</strong> ₹4Cr</p>
+<p><strong>Configuration:</strong> 3 BHK</p>
+<p><strong>Area:</strong> 1240 sq.ft Carpet</p>
+<p><strong>Area:</strong> 1736 sq.ft saleable</p>
+
+<br>
+
+<h3>Description</h3>
+
+<p>
+Premium residential apartment located in one of the best residential areas of Sahakarnagar.
+Excellent connectivity, peaceful surroundings and high resale potential.
+</p>
+
+<br>
+
+<a href="https://wa.me/919011802207?text=I am interested in Luxury Apartment in Baner"
+class="details-btn" target="_blank">
+Enquire on WhatsApp
+</a>
+
+</div>
+
+<!-- RIGHT SIDE IMAGE SLIDER (ADDED) -->
+<div>
+
+  <div class="detail-slider">
+
+    <div class="detail-slides">
+      <img src="/images/rent1-1.jpeg" class="active" alt="">
+      <img src="/images/rent1-2.jpeg" alt="">
+    </div>
+
+    <button class="slide-btn prev" onclick="changeSlide(-1,this)">‹</button>
+    <button class="slide-btn next" onclick="changeSlide(1,this)">›</button>
+
+  </div>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+Paradise Realtors – Pune
+</footer>
+
+<script>
+function changeSlide(step,btn){
+  const slider = btn.closest(".detail-slider");
+  const images = slider.querySelectorAll("img");
+
+  let index = 0;
+
+  images.forEach((img,i)=>{
+    if(img.classList.contains("active")) index = i;
+    img.classList.remove("active");
+  });
+
+  index = (index + step + images.length) % images.length;
+  images[index].classList.add("active");
+}
+</script>
+
+</body>
+</html>

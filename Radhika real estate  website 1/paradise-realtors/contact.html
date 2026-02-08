@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/css/style.css">
+<title>Contact Us</title>
+</head>
+<body>
+
+<nav>
+<div class="nav-wrap">
+<img src="/images/logo.png">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="rent.html">Home for Rent</a></li>
+<li><a href="sale.html">Home for Sale</a></li>
+ <li><a href="plot.html">Plot for Sale</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+</nav>
+
+<div class="hero" style="
+background:
+linear-gradient(rgba(10, 27, 46, 0),rgba(10, 27, 46, 0)),
+url('/images/background.png');
+background-size:cover;
+background-position:center;
+">
+<h1>Contact Paradise Realtors</h1>
+</div>
+
+<section>
+<div class="container split">
+
+<div>
+
+<form onsubmit="sendWA(event)">
+<input id="n" placeholder="Name" required>
+<input id="p" placeholder="Phone" required>
+<textarea id="m" placeholder="Message"></textarea>
+<button type="submit">Send on WhatsApp</button>
+</form>
+
+</div>
+
+<div>
+<h3>Contact Info</h3>
+<p>Email: paradiserealtors.pune@gmail.com</p>
+<p>Phone: +91 9011802207</p>
+<p>Location: Pune, Maharashtra</p>
+</div>
+
+</div>
+</section>
+
+<footer>Paradise Realtors – Pune</footer>
+
+<script>
+function sendWA(e){
+  e.preventDefault();
+  const t =
+`Name: ${n.value}
+Phone: ${p.value}
+Message: ${m.value}`;
+  window.open("https://wa.me/919011802207?text="+encodeURIComponent(t));
+}
+</script>
+
+</body>
+</html>

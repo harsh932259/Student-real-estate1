@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/css/style.css">
+<title>Plots for Sale – Paradise Realtors</title>
+</head>
+<body>
+
+<nav>
+<div class="nav-wrap">
+<img src="/images/logo.png">
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="rent.html">Home for Rent</a></li>
+  <li><a href="sale.html">Home for Sale</a></li>
+  <li><a href="plot.html">Plot for Sale</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- HERO -->
+
+<div class="hero" style="
+background:
+linear-gradient(rgba(10, 27, 46, 0.066),rgba(10, 27, 46, 0.093)),
+url('/images/background.png');
+background-size:cover;
+background-position:center;
+">
+  <h1>Plots for Sale</h1>
+</div>
+
+<section>
+<div class="container">
+
+<h2>Available Plots</h2>
+<br>
+
+<div class="grid">
+
+<!-- PLOT CARD 1 -->
+
+<div class="card">
+
+  <div class="slider" data-index="0">
+    <div class="slide active">
+      <img src="/images/plot1-1.png">
+    </div>
+    <div class="slide">
+      <img src="/images/plot1-2.png">
+    </div>
+  </div>
+
+  <div class="card-body">
+    <span class="badge">For Sale</span>
+    <h3>Residential Plot – Baner</h3>
+    <p>₹85 Lakh</p>
+
+    <a href="plot1.html" class="details-btn">View Details</a>
+  </div>
+
+  <div class="grid">
+
+<!-- PLOT CARD 1 -->
+
+<div class="card">
+
+  <div class="slider" data-index="0">
+    <div class="slide active">
+      <img src="/images/plot1-1.png">
+    </div>
+    <div class="slide">
+      <img src="/images/plot1-2.png">
+    </div>
+  </div>
+
+  <div class="card-body">
+    <span class="badge">For Sale</span>
+    <h3>Residential Plot – Baner</h3>
+    <p>₹85 Lakh</p>
+
+    <a href="plot2.html" class="details-btn">View Details</a>
+  </div>
+
+  <div class="grid">
+
+<!-- PLOT CARD 1 -->
+
+<div class="card">
+
+  <div class="slider" data-index="0">
+    <div class="slide active">
+      <img src="/images/plot1-1.png">
+    </div>
+    <div class="slide">
+      <img src="/images/plot1-2.png">
+    </div>
+  </div>
+
+  <div class="card-body">
+    <span class="badge">For Sale</span>
+    <h3>Residential Plot – Baner</h3>
+    <p>₹85 Lakh</p>
+
+    <a href="plot3.html" class="details-btn">View Details</a>
+  </div>
+
+  <div class="grid">
+
+<!-- PLOT CARD 1 -->
+
+<div class="card">
+
+  <div class="slider" data-index="0">
+    <div class="slide active">
+      <img src="/images/plot1-1.png">
+    </div>
+    <div class="slide">
+      <img src="/images/plot1-2.png">
+    </div>
+  </div>
+
+  <div class="card-body">
+    <span class="badge">For Sale</span>
+    <h3>Residential Plot – Baner</h3>
+    <p>₹85 Lakh</p>
+
+    <a href="plot4.html" class="details-btn">View Details</a>
+  </div>
+
+  <div class="grid">
+
+<!-- PLOT CARD 1 -->
+
+<div class="card">
+
+  <div class="slider" data-index="0">
+    <div class="slide active">
+      <img src="/images/plot1-1.png">
+    </div>
+    <div class="slide">
+      <img src="/images/plot1-2.png">
+    </div>
+  </div>
+
+  <div class="card-body">
+    <span class="badge">For Sale</span>
+    <h3>Residential Plot – Baner</h3>
+    <p>₹85 Lakh</p>
+
+    <a href="plot5.html" class="details-btn">View Details</a>
+  </div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+Paradise Realtors – Pune
+</footer>
+
+<script>
+setInterval(()=>{
+  document.querySelectorAll(".slider").forEach(slider=>{
+    const slides=slider.querySelectorAll(".slide");
+    let i=parseInt(slider.dataset.index);
+    slides[i].classList.remove("active");
+    i=(i+1)%slides.length;
+    slides[i].classList.add("active");
+    slider.dataset.index=i;
+  });
+},3000);
+</script>
+
+</body>
+</html>
